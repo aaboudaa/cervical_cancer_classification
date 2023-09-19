@@ -4,13 +4,12 @@ The "Cervical Cancer Classification" project is aimed at developing a machine le
 This project demonstrates the potential of machine learning in assisting medical professionals in the early detection of cervical cancer. By achieving a high F1 score, the model shows promise in accurately classifying cancer cases and contributing to better patient care.
 
 ## Key Steps and Insights:
-**1. Data Preprocessing:** The project begins with loading and preprocessing two main datasets: movie ratings and movie information. This involves cleaning and structuring the data for further analysis.
+**1. Data Preprocessing:** The project begins with loading and preprocessing the dataset. Missing values denoted by '?' are replaced with NaN, and columns are converted to the appropriate data types.
 
-**2. Data Exploration:** The project encodes movie genres into binary columns using the one-hot encoding technique, making it easier to incorporate genre information into the recommendation system.
+**2. Data Exploration:** Exploratory data analysis is performed to understand the distribution of categorical and numerical features. This includes visualizations such as count plots for categorical features and density plots for numerical features.
 
-**3. Handling Imbalanced Data:** The release year of each movie is extracted from the movie titles, and the titles are cleaned to remove the year information.
+**3. Handling Imbalanced Data:** The project identifies class imbalance in the target variable ('Dx_Cancer') and recognizes the need for balancing techniques to improve model performance.
 
-**4. Building the Model:** The project constructs a movie-user rating matrix, where movies are on one axis, users on the other, and each cell represents a user's rating for a specific movie. Missing values are filled with zeros.
+**4. Building the Model:** A Random Forest Classifier is chosen as the classification model. Hyperparameters for the Random Forest are defined, and the model is trained on the preprocessed data.
 
-**5. Model Evaluation:** The project includes data visualization to understand the distribution of user votes for movies and the number of votes by users.
-
+**5. Model Evaluation:** The model's performance is evaluated using the F1 score, a common metric for binary classification tasks. The F1 score quantifies the trade-off between precision and recall.
